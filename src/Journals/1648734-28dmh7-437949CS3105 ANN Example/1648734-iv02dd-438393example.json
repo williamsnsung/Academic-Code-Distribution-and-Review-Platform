@@ -1,0 +1,9 @@
+{
+    "n_hidden_layers": 1,
+    "n_nodes_per_hidden_layer": 10,
+    "activation_function": "Sigmoid",
+    "learning_rate": 0.001,
+    "batchsize": 128,
+    "nEpochs": 2000,
+    "patience": 100
+}

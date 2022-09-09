@@ -1,0 +1,142 @@
+h1, h2, h3, h5, h6, p, text {
+    color: rgb(220, 220, 220);
+}
+
+h4 {
+    color: black;
+}
+
+*:not(div,span), *:not(div,span)::before, *:not(div)::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    /*font-family: Arial, Helvetica Neue, Helvetica, sans-serif;*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body {
+    /*background-image: linear-gradient(30deg, #000000 0%, #3f3f3f 100%);*/
+    /*background-size: 100vw 100vh;*/
+    /*background-size: 100vw;*/
+    /*background-repeat: no-repeat;*/
+
+    /* https://pixabay.com/illustrations/design-decoration-decor-pattern-3561647/ */
+    background-image: url("./BG.jpg");
+    background-attachment: fixed;
+    background-blend-mode: saturation;
+
+}
+
+.backdrop-blur {
+    background-color: rgba(179, 179, 179, 0.4);
+}
+
+@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    .backdrop-blur {
+        background-color: rgba(179, 179, 179, 0.4);
+        -webkit-backdrop-filter: blur(1.5px);
+        backdrop-filter: blur(1.5px);
+    }
+}
+
+#__LOADING__BLOCK_DIV {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.global_tips {
+    position: fixed;
+    background: #fff3b8;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+    z-index: 99999;
+    border-top: 2px solid black;
+    border-bottom: 4px solid black;
+}
+
+.global_tips > p {
+    color: rgb(50, 50, 50);
+    margin-left: 20px;
+    padding: 10px 0 10px 20px;
+    border-left: 5px solid gray;
+    line-height: 22px;
+    font-size: 16px;
+}
+
+.global_tips > p > span {
+    background: #5d5d5d;
+    font-family: 'Courier New', monospace;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.global_tips > button {
+    position: fixed;
+    border: none;
+    margin: 0;
+    background: transparent;
+    float: right;
+    bottom: 4px;
+    right: 0;
+}
+
+/* Loading Animation: https://loading.io/css/ */
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: calc(50vw - 40px);
+    top: calc(50vh - 40px);
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+}

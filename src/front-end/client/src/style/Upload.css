@@ -1,0 +1,236 @@
+.UP_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 85vh;
+}
+
+.UP_msgbox {
+    display: flex;
+    width: 30%;
+    min-width: 700px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.UP_msgbox_in {
+    padding: 40px;
+    width: 100%;
+}
+
+.UP_msgbox_in > h1 {
+    color: black;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.UP_msgbox_in > p {
+    font-weight: lighter;
+    color: black;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.UP_msgbox_in > h1 > #UP_title {
+    font-size: 58px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: transparent;
+}
+
+.UP_msgbox_in > a, .UP_msgbox_in > a:hover {
+    background: transparent;
+}
+
+.UP_msgbox_in > a > button,
+.UP_form > button {
+    background: black;
+    border: black 1px solid;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    transition: all .25s;
+    border-radius: 30px;
+}
+
+.UP_msgbox_in > a > button:hover,
+.UP_form > button:hover {
+    cursor: pointer;
+    border-radius: 30px;
+    background: white;
+    color: black;
+}
+
+.UP_msgbox_in > a > button:active,
+.UP_form > button:active {
+    transition: all 0s;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(60, 60, 60);
+    color: white;
+}
+
+.UP_form > input {
+    font-size: 14px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    width: 60%;
+    background: transparent;
+    height: 25px;
+    color: black;
+    transition: all .3s;
+}
+
+.UP_form > input:focus {
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.UP_form > input::placeholder {
+
+}
+
+.UP_form > textarea {
+    font-size: 14px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    width: 60%;
+    background: transparent;
+    min-height: 100px;
+    color: black;
+    resize: vertical;
+    transition: all .3s;
+}
+
+.UP_form > textarea:focus {
+}
+
+.UP_tagContainer > input {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin: 20px;
+    width: 40%;
+    background: transparent;
+    height: 25px;
+    color: black;
+    transition: all .3s;
+}
+
+.UP_tags {
+    margin-left: 20%;
+    width: 60%;
+}
+
+.UP_tags > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.UP_tags > ul > li {
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 30px;
+    color: black;
+    border: 1px solid black;
+    margin: 3px 5px;
+    width: max-content;
+}
+
+.UP_tags > ul > li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.UP_tags > ul > :hover::after {
+    content: '  ×';
+}
+
+.UP_postContainer {
+    margin-top: 10px;
+}
+
+.UP_posts {
+    margin-left: 20%;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.UP_posts > ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.UP_posts > ul > li {
+    padding: 3px 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    width: 100%;
+    transition: all .2s;
+    margin-top: 20px;
+}
+
+.UP_posts > ul > li > p {
+    cursor: pointer;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.UP_posts > ul > li > p:hover:before {
+    color: red;
+    content: "Cancel ";
+    white-space: pre-wrap;
+}
+
+.UP_posts > ul > li > input {
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 30px;
+    color: black;
+    border: 1px solid black;
+    margin: 0 5px 3px 5px;
+    width: calc(100% - 30px);
+}
+
+.UP_postContainer > input {
+    font-size: 14px;
+    padding: 10px;
+    width: 40%;
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.UP_postContainer > input[type="file"] {
+    padding: 0;
+    font-size: 14px;
+}
+
+.UP_postContainer > input[type="file"]:hover {
+    cursor: pointer;
+}
+
+.UP_postContainer > input[type="file"]::file-selector-button {
+    background: transparent;
+    color: rgb(125, 125, 125);
+    border: 0;
+    border-right: 1px solid black;
+    padding: 3px 10px;
+    border-radius: 30px;
+}

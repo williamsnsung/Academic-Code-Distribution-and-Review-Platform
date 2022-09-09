@@ -1,0 +1,400 @@
+.AP_main {
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.AP_container {
+    padding: 20px;
+    background: rgb(24, 24, 24);
+    border-radius: 20px;
+    border: 1px solid rgb(100, 100, 100);
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: all .3s;
+    margin-bottom: 0;
+    min-height: 50px;
+}
+
+#AP_ID_title {
+    font-size: 40px;
+    color: white;
+    border-bottom: 1px solid rgb(59, 59, 59);
+}
+
+#AP_ID_meta {
+    font-size: 22px;
+    color: rgb(157, 157, 157);
+    font-weight: lighter;
+}
+
+#AP_ID_slug {
+    color: gray;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    border-bottom: 1px solid rgb(59, 59, 59);
+}
+
+#AP_USER_name {
+    font-weight: bold;
+    color: #9eb1ce;
+    padding: 10px 0 15px 0;
+}
+
+#AP_USER_name:hover {
+    color: white;
+}
+
+#AP_USER_name_a {
+    color: transparent;
+}
+
+#AP_USER_name_a:hover {
+    color: white;
+}
+
+#AP_USER_name:before {
+    font-weight: lighter;
+    content: "Author: ";
+}
+
+#AP_ID_create_date {
+    font-weight: lighter;
+    color: #7c7c7c;
+}
+
+#AP_ID_create_date:before {
+    content: "Release ";
+}
+
+#AP_ID_update_date {
+    font-weight: lighter;
+    color: #565656;
+}
+
+#AP_ID_update_date:before {
+    content: "Latest commit ";
+}
+
+#AP_ID_post_id {
+    color: #3a3a3a;
+    font-weight: normal;
+}
+
+#AP_ID_post_id:before {
+    content: "Post ID "
+}
+
+.AP_commentBOX {
+
+    white-space: nowrap;
+}
+
+.AP_commentBOX > h4 {
+    font-weight: lighter;
+    color: #7c7c7c;
+}
+
+.AP_commentBOX > input {
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    margin: 10px;
+    background: transparent;
+    color: white;
+    width: 20%;
+    transition: all .3s;
+}
+
+.AP_commentBOX > input:focus {
+    border: 1px solid #9eb1ce;
+    width: 80%;
+}
+
+.AP_Buttons {
+    float: right;
+    color: white;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    background: rgb(24, 24, 24);
+    margin: 10px 5px 0 5px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    transition: all .25s;
+    width: 10%;
+}
+
+.AP_Buttons:hover {
+    border: 1px solid #9eb1ce;
+    cursor: pointer;
+}
+
+.AP_commentBOX > p {
+    font-weight: lighter;
+    color: #7c7c7c;
+    padding-left: 15px;
+    padding-top: 10px;
+    line-height: 1;
+    margin: 0;
+}
+
+#AP_codeContainer {
+    counter-reset: line;
+}
+
+#linenumber, #editor {
+    font-family: 'Courier New', monospace;
+    margin: 20px 0;
+    padding: 10px 0;
+    height: 50vh;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.4;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#linenumber:focus-visible,
+#editor:focus-visible {
+    outline: none;
+}
+
+#linenumber {
+    display: flex;
+    border-color: transparent;
+    overflow-y: hidden;
+    text-align: right;
+    box-shadow: none;
+    color: #707070;
+    position: absolute;
+    width: 3rem;
+    padding: 10px 0.5rem;
+    border-radius: 10px 0 0 10px;
+    margin-left: 10px;
+
+    background-color: rgb(30, 30, 30);
+    border-right-color: #535d6b;
+}
+
+#editor {
+    padding-left: calc(3.5rem + 15px);
+    width: calc(100% - 25px);
+    margin-left: 10px;
+    border-radius: 10px;
+
+    background-color: rgb(40, 40, 40);
+    border-color: #272822;
+    color: #ffffff;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.1s linear;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    background: rgb(24, 24, 24);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.dropdown-content .AP_Buttons_Two {
+    width: 25%;
+    border-radius: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-content a {
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
+.AP_Buttons_Two {
+    display: inline-block;
+    position: relative;
+    color: white;
+    border: 1px solid rgb(100, 100, 100);
+    background: rgb(24, 24, 24);
+    margin: 10px 0 0 0;
+    padding: 5px 25px 5px 25px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    transition: all .25s;
+    border-radius: 0px;
+}
+
+.AP_Buttons_Two:hover {
+    border: 1px solid #9eb1ce;
+    cursor: pointer;
+}
+
+.dropdown-content > button {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+#AP_Button_Star {
+    border-radius: 0 10px 10px 0;
+}
+
+#AP_Button_Export {
+    border-radius: 10px 0 0 10px;
+}
+
+#Upvote_Button, #Downvote_Button {
+    position: relative;
+    color: white;
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 10px;
+    background: rgb(24, 24, 24);
+    margin: 14px 5px 0 0;
+    padding: 1px 6px 3px 6px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    transition: all .25s;
+    float: right;
+}
+
+#Upvote_Button:hover {
+    color: rgb(154, 250, 99);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#Upvote_Button:active {
+    color: rgb(154, 250, 99);
+    transform: scale(1);
+    border: 1px solid rgb(154, 250, 99);
+    cursor: pointer;
+}
+
+#Downvote_Button:hover {
+    color: rgb(255, 145, 145);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#Downvote_Button:active {
+    color: rgb(255, 145, 145);
+    transform: scale(1);
+    border: 1px solid rgb(255, 145, 145);
+    cursor: pointer;
+}
+
+#AP_ID_score {
+    position: relative;
+    padding: 3px 6px 3px 6px;
+    margin: 15px 0 0 0;
+    float: right;
+    font-size: 18px;
+    text-align: right;
+}
+
+#AP_ID_score:before {
+    font-size: 20px;
+    text-align: right;
+}
+
+.AP_image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.cm-editor {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cm-line, .cm-gutterElement {
+    font-size: 16px;
+}
+
+#videoPlayer {
+    margin: 10px 5%;
+    width: 90%;
+}
+
+/* theme switch */
+.AP_theme {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#theme_switch_input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+#theme_switch_label {
+    border: 1px solid gray;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: rgb(40, 44, 52);
+    display: block;
+    border-radius: 50px;
+    position: relative;
+}
+
+#theme_switch_label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: white;
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+#theme_switch_input:checked + #theme_switch_label:after {
+    background: rgb(40, 44, 52);
+}
+
+#theme_switch_input:checked + #theme_switch_label {
+    background: white;
+}
+
+#theme_switch_input:checked + #theme_switch_label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+#theme_switch_input > #theme_switch_label:active:after {
+    width: 130px;
+}

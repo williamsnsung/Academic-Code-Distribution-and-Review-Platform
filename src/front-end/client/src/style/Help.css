@@ -1,0 +1,19 @@
+#help-box {
+    background-color: white;
+    width: 550px;
+    border:10px solid black;
+    padding: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#help-box h2 {
+    color: black;
+}
+
+#help-box h3{
+    color: darkorange;
+}
