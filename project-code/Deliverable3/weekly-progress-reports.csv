@@ -1,0 +1,68 @@
+﻿,,,,,
+,SEMESTER 2,,,,
+Week,What did you do this week?,What will you do next week?,Anything blocking your progress?,Would you like to schedule a discussion?,Preferred meeting time
+2,"Import/Export debugging up until nginx, tokens using jwt working correctly",nginx,No,Yes,3:00:00 PM
+2,Import/Export progress with William,Connecting front end UI with back end functionality,No,Yes,4:00:00 PM
+2,User from a different journal can log into ours(pending testing) and set up the routes pending testing until nginx utalised,User from a different journal can log into ours(pending testing) and set up the routes pending testing until nginx utalised,No,No,3:00:00 PM
+2,Downloading files from posts,Keyboard shortcut and user profile,No,Yes,3:00:00 PM
+2,Downloading posts.,Online post editor; Saving and Uploading new changes.,No,No,3:00:00 PM
+3,nginx working on my user account,nginx on group account and finishing supergroup import export,No permissions to group account,No,3:00:00 PM
+3,Connecting front end Ui to actual backend functionality  (mainly APosts.js functionality),Work on features on the posts page and continue connecting them with backend functionality including post metrics and deliverable 3 report work,No,Yes,3:00:00 PM
+3,Fixed bug which let your access login with the incorrect password,Carry on with super group login but for our users to log into other supergroup,Got a networking practical and injured my knee so might not be able to work for a few days,Yes,3:00:00 PM
+3,Keyboard shortcuts in progress,User profile and metrics,Covid-19,Yes,3:00:00 PM
+3,Online post editor with saving and uploading changes.,Favorite; Individual posts page; Deleting posts.,No,No,3:00:00 PM
+4,"- Worked on the deliverable
+- Created routes for super group login authentication 
+- Organised supergroup testing for the protocol",Finish off the supergroup login and testing,Network practical due on Friday,No,3:00:00 PM
+4,"Implemented nginx, wrote scripts to assist development of website","Continue writing scripts to assist on development, supergroup import/export",No,Yes,3:00:00 PM
+4,"Deliverable 3 - Scrum report section
+Keyboard shortcuts in progress","Finish keyboard shortcuts
+Start working on user profiles and metrics",Covid-19,Yes,3:00:00 PM
+4,Favorite; Individual posts; Deleting.,Voting,No,No,3:00:00 PM
+4,Setting out plans for the super group login protocol and cleaning up code form the initial attempt,Work on function that lets user from a different journal log into ours,No,No,3:00:00 PM
+,,,,,
+,SEMESTER 1,,,,
+Week,What did you do this week?,What will you do next week?,Anything blocking your progress?,Would you like to schedule a discussion?,Preferred meeting time
+4,Product backlog for program and technologies - languages section,Start coding,AI Practical 1 was but not anymore,No,11:00:00 AM
+4,"*Super group meeting about authentication
+*analysis of front end tools
+",Start programing,deadline - on Friday,Yes,10:00:00 AM
+4,Write report for deliverable 1.,"Deciding implementation techniques and allocation of tasks with team mates. 
+Start to write initial unit tests for everybody to describe aspects of our backlog.","I might have to focus on my two practicals due week 5, 
+but I will try do get my tasks done.",No,11:00:00 AM
+4,"- Scrum Meeting
+- Write Scrum section of the report for Deliverable 1","- Start working on the database design
+- Add schema for database design",No,Yes,11:00:00 AM
+4,"Filled in core requirements, additional requirements, setup the gitlab. 
+Doing overview of semester 1 plan after scrum meeting, problems we may have with development",Will be discussed in scrum meeting,Deadlines?,Yes,11:00:00 AM
+5,"Server-side input validation for register, minor fixes, customErrors.js and validate.js",register users server side + post input validation,no,Yes,10:00:00 AM
+5,"- Database design for users and posts
+- Testing of the database
+- Set up database on MariaDB","- Create database getter and setter functions
+- Debugging and testing",No,Yes,11:00:00 AM
+5,Completed Register fully and begun looking at the front end,overhaul the filespace and code for frontend,no,Yes,10:00:00 AM
+5,Database design; Agent/Proxy Design mode,Database and server connection.,N/A,No,1:01:00 AM
+6,"Worked on front-end to create basic user interface and establish communication between client and 
+server to enable users to be registered",Work on front-end to enable user to submit code,Nothing massive,No,11:00:00 AM
+6,- Researched the generation of unique user IDs,- Backend of the login form for the user,No,Yes,11:00:00 AM
+6,Database setup; Users table setup and basic users operation.,Provide more functionalities of database; interacting database with backend server.,N/A,No,11:00:00 AM
+6,Set up the wiki and the repo for the next deliverable,Begin work on the web interface using react,*waves arms at everything*,Yes,12:00:00 PM
+7,"Optimize Server and Front-end. Debug. Automatic tests. Three basic Object Class. (Post, User, Comment)",Server and Database connection. Fron-end Backend connection.,N/A,No,2:02:00 AM
+7,"- Started working on login
+- Researched about hashing passwords in Javascript
+- Understand bcrypt documentation","- Debug login 
+- Understand util functions for backend",No,Yes,10:00:00 AM
+7,Post functionality - front end,Login functionality,Non as of yet,No,9:00:00 AM
+7,"front end overhaul, file cleanup, and nav bar + css",file uploading ,no,Yes,10:00:00 AM
+8,DB part of Comment. Tests.,Tests; Report; etc.,N/A,No,11:00:00 AM
+8,- Login validation functions (user ID and password validation),"- Debugging and fixing current code issues
+- Report and wiki documentation",No,Yes,10:00:00 AM
+8,Login - front end,Login for super group,None,No,10:00:00 AM
+8,content uploading + issue resolving + bug fixing,"start on report, fix more issues and help where I am needed",no,Yes,10:00:00 AM
+9,"- Write report for Deliverable 2
+- Testing and documentation
+- Login verification debugging ",- Scrum reflection meeting,No,Yes,10:00:00 AM
+9,Frontend Interface Design. Backend Frontend communication.,Submit Deliverable2. Supergroup login.,N/A,No,3:03:00 AM
+9,Login-supergroup,Improve front end presentation,Deadlines for other moduels,No,10:00:00 AM
+9,started on report and content migration,"continue on report and content migration alongside anything else that needs doing 
+until we submit",my impending doom,Yes,10:00:00 AM

@@ -1,0 +1,193 @@
+<html xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
+<title>DNS and UDP</title>
+<meta charset="iso-8859-1">
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="DNS%20and%20UDP_files/aaCssFile.html">
+<meta name="src" content="CS2003-Examples-wk03.tex">
+</head>
+<body>
+<div class="maketitle">University of St Andrews School of Computer Science<br>
+<br>
+CS2003&nbsp;—&nbsp;Internet and the Web&nbsp;—&nbsp;2021/22 &nbsp;<br>
+Exercise&nbsp;3:
+<h2 class="titleHead">DNS and UDP</h2>
+<br>
+Date: 2021-09-30<br></div>
+<!--l. 27-->
+<p class="noindent">As with all lab exercises, this exercise is not 
+directly assessed. It is intended to complement the material presented 
+in lectures and may turn up in the exam. You are encouraged to complete 
+it in your own time if you do not finish during the scheduled exercise 
+class time. You are also encouraged to work with other people in the 
+class to complete the exercises — you can also work on the exercise 
+classes during lab sessions and use the relevant Teams channels to 
+discuss things with
+each other or to ask for help from a demonstrator. <!--l. 37--></p>
+<p class="noindent">The aim of this exercise class is to use the Linux 
+command line interface (CLI) and some simple Java programs to explore 
+some of the material covered in lectures on DNS and UDP. By now you 
+should be familiar with logging in to the lab clients, so please do this
+ before attempting any of the exercises.</p>
+<h3 class="sectionHead"><span class="titlemark">1</span> <a id="x1-10001"></a>DNS</h3>
+<!--l. 45-->
+<p class="noindent">dig is a command line tool that can send queries to 
+the DNS. In this activity, you will use dig to observe the 
+request-response behaviour of DNS. <!--l. 49--></p>
+<p class="noindent"></p>
+<ol class="enumerate1">
+<li class="enumerate" id="x1-1002x1">Use dig to look up the IPv4 address for the host www.caida.org, by typing:
+<div class="verbatim" id="verbatim-1"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;$</span><span class="pcrr7t-x-x-140">&nbsp;dig</span><span class="pcrr7t-x-x-140">&nbsp;www.caida.org</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 55-->
+<p class="nopar"><!--l. 57--></p>
+<p class="noindent">In the output, the part marked ‘;; ANSWER SECTION:’ contains an entry in the format:</p>
+<div class="verbatim" id="verbatim-2"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;&lt;hostname&gt;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;&lt;TTL&gt;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;IN</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;A</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;&lt;IPv4</span><span class="pcrr7t-x-x-140">&nbsp;address&gt;</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 62-->
+<p class="nopar"><!--l. 64--></p>
+<p class="noindent">Note the value of &lt;TTL&gt;, and the value of Query time:, at the end of the response.</p>
+</li>
+<li class="enumerate" id="x1-1004x2">Run the dig command again, ≈30s after the first run. Make a note of the &lt;TTL&gt; value, and the Query time: value, again.</li>
+<li class="enumerate" id="x1-1006x3">Wait at least another 40s and run the dig command yet again, noting once more the value of both &lt;TTL&gt; and Query time:.</li>
+<li class="enumerate" id="x1-1008x4">What do you think is happening? 
+(You might not see exactly what you expect to see if other students are 
+performing this same exercise at the same time as you – see if you can 
+explain why!) <!--l. 81-->
+<p class="noindent">Remember that you can type man dig to find out more about dig.</p>
+</li>
+</ol>
+<!--l. 87-->
+<p class="noindent"></p>
+<h3 class="sectionHead"><span class="titlemark">2</span> <a id="x1-20002"></a>More DNS</h3>
+<!--l. 89-->
+<p class="noindent">For this section you may wish to refer to the textbook at <a href="https://book.systemsapproach.org/applications/infrastructure.html#name-service-dns" class="url">https://book.systemsapproach.org/applications/infrastructure.html#name-service-dns</a> <!--l. 92--></p>
+<p class="noindent"></p>
+<ol class="enumerate1">
+<li class="enumerate" id="x1-2002x1">Use dig to look up the DNS records for teams.microsoft.com. <!--l. 97-->
+<p class="noindent"></p>
+<ol class="enumerate2">
+<li class="enumerate" id="x1-2004x1">What is a CNAME record? Why do you think these are used for Microsoft Teams?</li>
+</ol>
+</li>
+<li class="enumerate" id="x1-2006x2">Application users might sometimes 
+wish to submit partial hostnames rather than FQDNs for simplicity. For 
+instance if you are on the CS network, you might wish to just refer to 
+trenco, rather than the FDQN trenco.cs.st-andrews.ac.uk. <!--l. 108-->
+<p class="noindent"></p>
+<ol class="enumerate2">
+<li class="enumerate" id="x1-2008x1">Do a DNS lookup for trenco:
+<div class="verbatim" id="verbatim-3"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;$</span><span class="pcrr7t-x-x-140">&nbsp;dig</span><span class="pcrr7t-x-x-140">&nbsp;+search</span><span class="pcrr7t-x-x-140">&nbsp;trenco</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 114-->
+<p class="nopar"><!--l. 116--></p>
+<p class="noindent">(you can search the dig manual pages for “+[no]search” to see why I have used this command-line argument) <!--l. 120--></p>
+<p class="noindent">and also search for the FQDN:</p>
+<div class="verbatim" id="verbatim-4"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;$</span><span class="pcrr7t-x-x-140">&nbsp;dig</span><span class="pcrr7t-x-x-140">&nbsp;+search</span><span class="pcrr7t-x-x-140">&nbsp;trenco.cs.st-andrews.ac.uk</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 124-->
+<p class="nopar"></p>
+</li>
+<li class="enumerate" id="x1-2010x2">Now try to search for the (non-existent) host trenco2:
+<div class="verbatim" id="verbatim-5"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;$</span><span class="pcrr7t-x-x-140">&nbsp;dig</span><span class="pcrr7t-x-x-140">&nbsp;+search</span><span class="pcrr7t-x-x-140">&nbsp;trenco2</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 131-->
+<p class="nopar"><!--l. 133--></p>
+<p class="noindent">and:</p>
+<div class="verbatim" id="verbatim-6"><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;$</span><span class="pcrr7t-x-x-140">&nbsp;dig</span><span class="pcrr7t-x-x-140">&nbsp;+search</span><span class="pcrr7t-x-x-140">&nbsp;trenco2.cs.st-andrews.ac.uk</span> <span class="pcrr7t-x-x-140">&nbsp;</span><br>
+<span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span><span class="pcrr7t-x-x-140">&nbsp;</span></div>
+<!--l. 137-->
+<p class="nopar"><!--l. 139--></p>
+<p class="noindent">How does the output differ and why do you think this
+ is? Examine the file /etc/resolv.conf and the manual page man 
+resolv.conf to find out more.</p>
+</li>
+</ol>
+</li>
+<li class="enumerate" id="x1-2012x3">Refer back to the DNS name resolution slide (slide 27 of <a href="https://studres.cs.st-andrews.ac.uk/CS2003/Lectures/cs2003_net-04_internet_protocol.pdf" class="url">https://studres.cs.st-andrews.ac.uk/CS2003/Lectures/cs2003_net-04_internet_protocol.pdf</a>).
+ Now look at /etc/resolv.conf on one of the host servers. What are the 
+IP addresses of that host server’s local resolvers? Why does the 
+/etc/resolv.conf file require IP addresses for resolvers and not
+hostnames?</li>
+</ol>
+<!--l. 155-->
+<p class="noindent"></p>
+<h3 class="sectionHead"><span class="titlemark">3</span> <a id="x1-30003"></a>UDP</h3>
+<!--l. 157-->
+<p class="noindent">There is code on studres for some simple unicast UDP client-server applications. <!--l. 162--></p>
+<p class="noindent">Please examine the code in 
+CS2003/Examples/CS2003-Examples-wk03/code/udp/, especially looking at 
+the use of the Java classes DatagramSocket and DatagramPacket. <!--l. 167--></p>
+<p class="noindent">UdpClient1 and UdpServer1 simply demonstrate the 
+transmission and reception of a UDP packet, with the server printing out
+ relevant information about the UDP packet. <!--l. 171--></p>
+<p class="noindent">UdpClient1a and UdpServer1a extend this a little, 
+with a trivial session protocol: using the string “quit” to terminate 
+the session (as well as terminate the server). <!--l. 175--></p>
+<p class="noindent">UdpSocket is an abstraction that combines DatagramSocket and DatagramPacket to represent a UDP communication endpoint. <!--l. 179--></p>
+<p class="noindent">Note that there is not such a big difference in the 
+‘client’ and ‘server’ code, as there was for TCP. UdpChat demonstrates 
+this, by showing how a single program can have both ‘client’ and 
+‘server’ roles, accepting messages and sending messages. <!--l. 184--></p>
+<p class="noindent"></p>
+<ol class="enumerate1">
+<li class="enumerate" id="x1-3002x1">Compile the example code — you will need to edit the code appropriately to do this.</li>
+<li class="enumerate" id="x1-3004x2">Run UdpServer1, and then run UdpClient1 to communicate with the running server. Note and discuss your observations.</li>
+<li class="enumerate" id="x1-3006x3">Without UdpServer1 running, run 
+UdpClient1 to the same name/port as the server was running on before. 
+Note and discuss your observations.</li>
+<li class="enumerate" id="x1-3008x4">Run UdpServer1a , and then run UdpClient1a to communicate with the running server. Note and discuss your observations.</li>
+<li class="enumerate" id="x1-3010x5">Run the UdpChat program with another student. Note and discuss your observations and discuss the operation of the program.</li>
+</ol>
+<!--l. 207-->
+<p class="noindent"></p>
+<h3 class="sectionHead"><span class="titlemark">4</span> <a id="x1-40004"></a>Supplementary</h3>
+<!--l. 209-->
+<p class="noindent">We have seen in the first practical that providing 
+command-line parameters to applications can make it useful for both 
+users and developers, since this allows run-time rather than 
+compile-time configuration. There is some other example code on studres 
+that you might find useful for future practicals. Please do look at the 
+code in CS2003/Examples/CS2003-Examples-wk03/code/supplementary/ to see 
+how it works, and discuss it with others. <!--l. 217--></p>
+<p class="noindent"></p>
+<h4 class="subsectionHead"><span class="titlemark">4.1</span> <a id="x1-50004.1"></a>Configuration</h4>
+<!--l. 219-->
+<p class="noindent">It is often necessary to supply initial values for 
+certain parameters for configuring an application, especially servers, 
+but clients also. The Java class Configuration provides an example of 
+how this can be done in Java. The Java approach is to use Properties, 
+which are simply name/value bindings in a file. This is not the only way
+ of doing this: it is possible to use other configuration file formats, 
+e.g. JSON (<a href="https://json.org/" class="url">https://json.org/</a>) or YAML
+(<a href="https://yaml.org/" class="url">https://yaml.org</a>), or even something custom designed and built for a particular application. <!--l. 229--></p>
+<p class="noindent"></p>
+<h4 class="subsectionHead"><span class="titlemark">4.2</span> <a id="x1-60004.2"></a>LogFileWriter</h4>
+<!--l. 231-->
+<p class="noindent">The Java class LogFileWriter provides a very simple 
+mechanism for writing information to a file from any program. Servers 
+often need logs for various reasons, e.g. performance monitoring, 
+measuring usage / load, etc. That said, logging is useful for many 
+general purposes, including for debugging. <!--l. 237--></p>
+<p class="noindent"></p>
+<h4 class="subsectionHead"><span class="titlemark">4.3</span> <a id="x1-70004.3"></a>AddressInfo</h4>
+<!--l. 239-->
+<p class="noindent">The Java class AddressInfo is a simple demonstration
+ of a ServerSocket, but also gives some information you might find 
+useful. If you run the server, you can connect to it using the nc 
+command-line program. <!--l. 244--></p>
+<p class="noindent"></p>
+<ol class="enumerate1">
+<li class="enumerate" id="x1-7002x1">TestConfiguration shows a very 
+simple example of the Configuration class. Try to adapt UdpServer1 so 
+that it can read in configuration information from server.properties and
+ use a configured port number, print out ServerName_ on startup, and log
+ to a file.</li>
+</ol>
+<!--l. 253-->
+<p class="noindent">Tristan Henderson, with thanks to Saleem Bhatti</p>
+
+
+</body></html>

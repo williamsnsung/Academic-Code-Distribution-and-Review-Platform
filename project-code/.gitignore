@@ -1,0 +1,30 @@
+# Simple .gitignore template.
+# Feel free to add anything.
+
+# Node Modules
+node_modules
+package-lock.json
+
+# JetBrain
+.idea
+cmake-build-debug
+CMakeLists.txt
+*.iml
+
+# VScode
+.vscode
+
+# Build
+out
+
+# Upload
+# src/back-end/Journals
+
+# nohup output
+scripts/nohup.out
+
+# Python
+__pycache__/
+
+# Tensorflow
+~

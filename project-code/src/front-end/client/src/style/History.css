@@ -1,0 +1,67 @@
+.history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 0vh;
+    padding-bottom: 50px;
+
+}
+
+.history-contents {
+    padding: 40px;
+    width: 40%;
+    min-width: 700px;
+    background: white;
+
+    box-sizing: border-box;
+}
+
+.history-contents h1 {
+    color: black;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.history-element {
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid lightgray;
+    border-radius: 20px;
+
+}
+
+.history-element h2 {
+    color: black;
+}
+
+.history-element h3 {
+    color: rgb(31, 31, 31);
+}
+
+
+.history-element p {
+    color: rgb(100, 100, 100);
+}
+
+.history-posts {
+    margin: 50px 50px 50px 50px;
+}
+
+.history-buttons button {
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    transition: all .2s;
+}
+
+.history-buttons button:hover {
+    background-color: rgb(201, 201, 201);
+    border-bottom: 2px solid rgb(151, 151, 151);
+}
+
+.display-size-buttons button {
+    background-color: white;
+}

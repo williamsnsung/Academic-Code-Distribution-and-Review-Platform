@@ -1,0 +1,15 @@
+{
+    "serverHost":"https://cs3099user03.host.cs.st-andrews.ac.uk/",
+    "axiosConfigJSON": {
+        "headers": {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    },
+    "axiosConfigFormData": {
+        "headers": {
+            "Content-type": "multipart/form-data"
+        }
+    }
+}
+
+

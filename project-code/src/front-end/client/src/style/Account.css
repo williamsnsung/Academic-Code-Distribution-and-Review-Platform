@@ -1,0 +1,192 @@
+.RL_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 0vh;
+    padding-top: 10vh;
+}
+
+.RGST_LGIN {
+    display: flex;
+    width: 40%;
+    min-width: 700px;
+    background: white;
+    box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.RL_column {
+    padding: 40px;
+    width: 70%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.RL_logged {
+    padding: 40px;
+    width: 100%;
+}
+
+.RL_logged > h2 {
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 10px auto;
+    border: 4px solid indianred;
+    line-height: 110px;
+    border-radius: 100px;
+    font-size: 50px;
+    background: indianred;
+}
+
+.RL_logged > h1,
+.RL_logged > p {
+    color: black;
+}
+
+.RL_logged > h1 {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.RL_logged > h6 {
+    background: purple;
+    margin: 15px auto;
+    width: min-content;
+    padding: 3px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.RL_logged > p {
+    display: inline-block;
+}
+
+#useremail, #userphone, #userid {
+    padding: 0 20px 5px 0;
+}
+
+#useremail:before {
+    color: gray;
+    content: "Email: ";
+}
+
+#userphone:before {
+    color: gray;
+    content: "Phone: ";
+}
+
+#userid:before {
+    color: gray;
+    content: "ID: ";
+}
+
+#user_regis_date:before {
+    color: gray;
+    content: "Member since ";
+}
+
+.RL_box {
+}
+
+.input-bar {
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*padding: 22px 10px 17px 10px;*/
+    padding: 10px 0 10px 10px;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    color: black;
+}
+
+.select-bar {
+    padding: 10px 0 10px 10px;
+    height: 30px;
+    margin: 5px 0 5px 0;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-bar:focus {
+    outline: none;
+}
+
+.input-label {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    transition: top .1s;
+    color: gray;
+    background: white;
+}
+
+.input-bar:focus + .input-label,
+.input-bar:valid + .input-label {
+    top: 0;
+    font-size: 13px;
+}
+
+.input-bar:focus + .input-label {
+    color: black;
+}
+
+.input-bar:focus {
+    border: 1px solid black;
+}
+
+.RL_box > button,
+.RL_logged > button {
+    background: black;
+    border: black 1px solid;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    transition: all .25s;
+    border-radius: 30px;
+}
+
+.RL_box > button:hover,
+.RL_logged > button:hover {
+    cursor: pointer;
+    border-radius: 30px;
+    background: white;
+    color: black;
+}
+
+.RL_box > button:active,
+.RL_logged > button:active {
+    transition: all 0s;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(60, 60, 60);
+    color: white;
+}
+
+#forgot {
+    background: white;
+    border: none;
+    color: royalblue;
+    margin: 10px 0;
+    padding: 0;
+    width: max-content;
+    font-size: 14px;
+}
+
+#forgot:hover::before {
+    content: "> ";
+}
+
+#forgot:hover::after {
+    content: " <";
+}

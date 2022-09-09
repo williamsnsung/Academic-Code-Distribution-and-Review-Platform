@@ -1,0 +1,148 @@
+.main_div {
+    width: 70%;
+    margin: 0 10% 30px 10%;
+    padding: 30px 5%;
+    background: white;
+}
+
+#title {
+    margin: 40px 20px 0 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: normal;
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+#title:before {
+    font-size: 48px;
+    content: "Search Result ";
+    font-weight: bold;
+}
+
+.grid_item > div > div {
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(222, 222, 222);
+    transition: all .2s;
+    margin: 10px;
+}
+
+.grid_item {
+    float: left;
+    position: relative;
+}
+
+.grid_item > div > h2 {
+    color: black;
+    margin: 20px 10px;
+}
+
+#grid_journal {
+    min-width: 500px;
+    width: 30%;
+}
+
+#grid_post {
+    min-width: 500px;
+    width: 30%;
+}
+
+#grid_user,
+#grid_tag {
+    min-width: 250px;
+    width: 20%;
+    height: min-content;
+}
+
+#grid_user > div > div,
+#grid_tag > div > div {
+    background: white;
+}
+
+#grid_user > div > div > a,
+#grid_tag > div > div > a {
+    text-decoration: none;
+}
+
+#grid_user > div > div > a :hover,
+#grid_tag > div > div > a :hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#grid_user > div > div > a > h2,
+#grid_tag > div > div > a > h2 {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#grid_user > div > div > a > h3,
+#grid_tag > div > div > a > h3 {
+    color: black;
+    font-size: 18px;
+}
+
+#grid_user > div > div > h3,
+#grid_tag > div > div > h3 {
+    color: rgb(80, 80, 80);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+}
+
+#grid_user > div > div > h4,
+#grid_tag > div > div > h4 {
+    color: rgb(100, 100, 100);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#grid_user > div > div > a > h5,
+#grid_tag > div > div > a > h5 {
+    background: purple;
+    width: min-content;
+    padding: 2px 7px;
+    font-size: 12px;
+    border-radius: 10px;
+    float: right;
+}
+
+#grid_user > div > div > h6 {
+    font-size: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+#grid_user > div > div > h6:before {
+    content: "id: ";
+}
+
+#state_bar {
+    width: 200px;
+    margin: 40px;
+}
+
+#state_bar > h2 {
+    color: black;
+    font-size: 18px;
+}
+
+#state_bar > h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(80, 80, 80);
+    margin: 10px 0;
+}
+
+#state_bar > h3 > span {
+    float: right;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 2px 8px 0 8px;
+}
+
+.highlight {
+    background-color: yellow;
+}
