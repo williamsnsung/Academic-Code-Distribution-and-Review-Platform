@@ -8,7 +8,7 @@ Team 3 Supergroup C
 * Dependencies
 
 Source code for our project can be found in the `/src` directory.
-Group report for Deliverable 4 can be found in the `/Deliverable4` directory and the CS3099_D4_GroupReport pdf file.
+Group report for Deliverable 4 can be found in the `/Deliverable4` directory and the `CS3099_D4_GroupReport.pdf` pdf file.
 
 ## Recommendations
 
